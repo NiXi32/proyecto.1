@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- METADATOS PRINCIPALES -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Munisoft - Sistema de Gestión Tributaria Municipal</title>
+  <meta name="description" content="Software especializado para la gestión municipal moderna">
+
+  <!-- RECURSOS EXTERNOS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="chat.css">
+
+
+</head>
+
+<body>
+
+  <!-- Botón flotante -->
+  <div id="chatbot-icon">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="Chatbot">
+  </div>
+
+  <!-- Ventana del chatbot -->
+  <div id="chatbot-window">
+    <div class="chatbot-header">
+      Asistente de Catastro
+    </div>
+    <div class="chatbot-messages" id="chatbot-messages">
+      <!-- Mensajes aparecerán aquí -->
+    </div>
+    <div class="chatbot-input">
+      <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
+      <button id="send-button">Enviar</button>
+    </div>
+  </div>
+  </div>
+
+  <!-- ========== SECCIÓN HEADER/NAVEGACIÓN ========== -->
+  <header class="header-area">
+    <div class="container header-container">
+      <div class="logo">
+        <img src="img/logo_siam.png" alt="Munisoft Logo">
+      </div>
+
+      <!-- Menú de navegación principal -->
+      <nav class="nav-list">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#caracteristicas" class="nav-link">Características</a>
+        <a href="#beneficios" class="nav-link">Beneficios</a>
+        <a href="#testimonios" class="nav-link">Testimonios</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+
+      <!-- Botón para menú móvil -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== BARRA DE REDES SOCIALES ========== -->
+  <div class="social-bar-container">
+    <div class="social-bar-left">
+      <a href="https://www.facebook.com/..." target="_blank" class="social-bar-link social-bar-facebook"
+        rel="noopener noreferrer">
+        <i class="fab fa-facebook-f"></i>
+        <span class="social-bar-text">Facebook</span>
+      </a>
+      <a href="https://www.tiktok.com/@siamsoft_peru" target="_blank" class="social-bar-link social-bar-tiktok"
+        title="TikTok" rel="noopener noreferrer">
+        <i class="fab fa-tiktok"></i>
+        <span class="social-bar-text">TikTok</span>
+      </a>
+      <a href="https://x.com/siamsoft" target="_blank" class="social-bar-link social-bar-twitter" title="Twitter"
+        rel="noopener noreferrer">
+        <i class="fab fa-twitter"></i>
+        <span class="social-bar-text">Twitter</span>
+      </a>
+      <a href="https://www.youtube.com/@siamsoft" target="_blank" class="social-bar-link social-bar-youtube"
+        title="YouTube" rel="noopener noreferrer">
+        <i class="fab fa-youtube"></i>
+        <span class="social-bar-text">YouTube</span>
+      </a>
+      <a href="https://www.siamsoft.net/siam/" target="_blank" class="social-bar-link social-bar-web" title="Sitio Web"
+        rel="noopener noreferrer">
+        <i class="fas fa-globe"></i>
+        <span class="social-bar-text">Sitio Web</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ========== SECCIÓN HERO ========== -->
+  <section id="inicio" class="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <h1 data-animate="fadeIn">
+          <span> Transforma tu Municipalidad</span><br>
+          <span>con <span class="text-primary">Tecnología</span></span>
+        </h1>
+        <p data-animate="fadeIn" class="delay-1">Somos un equipo con pasión por la tecnología, nuestros proyectos son el
+          mejor respaldo.</p>
+
+        <div class="hero-cta" data-animate="fadeIn" class="delay-2">
+          <a href="https://wa.me/+51996909051" class="btn btn-primary"> Contactos</a>
+        </div>
+      </div>
+
+      <div class="hero-image" data-animate="slideInRight">
+        <img src="img/municipio.png" alt="Sistema de Gestión Municipal">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECCIÓN DE CARACTERÍSTICAS/SOLUCIONES ========== -->
+  <section id="caracteristicas" class="section gradient-bg">
+    <div class="container">
+      <h2 class="section-title" data-animate="fadeIn">Productos y servicios que ofrecemos</h2>
+      <p class="section-subtitle" data-animate="fadeIn" data-delay="0.1">Contamos con sistemas que están trabajando
+        exitosamente en las distintas entidades del sector público y privado.</p>
+
+      <div class="solutions-grid">
+        <!-- Tarjeta 1 -->
+        <div class="solution-card" data-animate="zoomIn">
+          <div class="solution-header">
+            <div class="solution-icon">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <h3>Padrón Tributario Digital</h3>
+          </div>
+          <ul>
+            <li>Software de gestión tributaria y caja</li>
+            <li>Registro Único del Contribuyente (RUC Local)</li>
+            <li>Historial Completo</li>
+            <li>Carga Masiva de Data</li>
+          </ul>
+          <a href="#contacto" class="solution-link">
+            Más información <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="solution-card" data-animate="zoomIn" data-delay="0.1">
+          <div class="solution-header">
+            <div class="solution-icon">
+              <i class="fas fa-map-marked-alt"></i>
+            </div>
+            <h3>Emisión Masiva de Arbitrios</h3>
+          </div>
+          <ul>
+            <li>Configuración Automatizada por Rubros y Parámetros</li>
+            <li>Generación Programada y Masiva de Deudas</li>
+            <li>Validación y Control de Emisión Previo</li>
+            <li>Historial de Emisiones y Estados de Cuenta</li>
+          </ul>
+          <a href="#contacto" class="solution-link">
+            Más información <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="solution-card" data-animate="zoomIn" data-delay="0.2">
+          <div class="solution-header">
+            <div class="solution-icon">
+              <i class="fas fa-fingerprint"></i>
+            </div>
+            <h3>Gestión de Recaudación</h3>
+          </div>
+          <ul>
+            <li>Conciliación Automatizada en Tiempo Real</li>
+            <li>Dashboard de Recaudación con Indicadores Clave</li>
+            <li>Seguimiento de Metas y Proyecciones</li>
+            <li>Integración con Múltiples Canales de Pago</li>
+          </ul>
+          <a href="#contacto" class="solution-link">
+            Más información <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="solution-card" data-animate="zoomIn" data-delay="0.3">
+          <div class="solution-header">
+            <div class="solution-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Control de Deuda Morosa</h3>
+          </div>
+          <ul>
+            <li>Segmentación Automatizada de Deudores</li>
+            <li>Generación Automática de Estados de Cuenta e Intimaciones</li>
+            <li>Bloqueo Automático de Trámites y Servicios</li>
+            <li>Gestión de Planes de Pagos y Convenios</li>
+          </ul>
+          <a href="#contacto" class="solution-link">
+            Más información <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Tarjeta 5 -->
+        <div class="solution-card" data-animate="zoomIn" data-delay="0.4">
+          <div class="solution-header">
+            <div class="solution-icon">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <h3>Reportes e Indicadores</h3>
+          </div>
+          <ul>
+            <li>Dashboards Interactivos en Tiempo Real</li>
+            <li>Generación Automática de Reportes Oficiales</li>
+            <li>Indicadores de Gestión por Metas (KPI's)</li>
+            <li>Análisis Histórico y Comparativo</li>
+          </ul>
+          <a href="#contacto" class="solution-link">
+            Más información <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <!-- Tarjeta 6 -->
+        <div class="solution-card" data-animate="zoomIn" data-delay="0.4">
+          <div class="solution-header">
+            <div class="solution-icon">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <h3>Tasas y Contribuciónes</h3>
+          </div>
+          <ul>
+            <li>Contribuciones especiales</li>
+            <li>Tasa administrativa</li>
+            <li>Las tasas estatales</li>
+            <li>Las tasas locales</li>
+          </ul>
+          <a href="#contacto" class="solution-link">
+            Más información <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECCIÓN DE BENEFICIOS ========== -->
+  <section id="beneficios" class="section gradient-bg">
+    <div class="container">
+      <h2 class="section-title" data-animate="fadeIn"> Beneficios de Nuestro Sistema</h2>
+      <p class="section-subtitle" data-animate="fadeIn" data-delay="0.1">Descubre cómo nuestra solución transforma la
+        gestión tributaria municipal en el Perú</p>
+
+      <div class="tabs-container" data-animate="fadeIn" data-delay="0.2">
+        <!-- Pestañas -->
+        <div class="tabs-header">
+          <div class="tab-button active" data-tab="tab1">
+            <i class="fas fa-chart-line"></i>
+            <span>Eficiencia Recaudatoria</span>
+          </div>
+          <div class="tab-button" data-tab="tab2">
+            <i class="fas fa-lock"></i>
+            <span>Seguridad de Datos</span>
+          </div>
+          <div class="tab-button" data-tab="tab3">
+            <i class="fas fa-mobile-alt"></i>
+            <span>Acceso Remoto</span>
+          </div>
+          <div class="tab-button" data-tab="tab4">
+            <i class="fas fa-hand-holding-usd"></i>
+            <span>Reducción de Costos</span>
+          </div>
+        </div>
+
+        <!-- Contenido de las pestañas -->
+        <div class="tabs-content">
+          <!-- Pestaña 1 -->
+          <div class="tab-pane active" id="tab1">
+            <div class="tab-content-inner">
+              <div class="tab-text">
+                <h3>Maximiza tu Recaudación Tributaria</h3>
+                <p>Nuestro sistema está específicamente diseñado para las necesidades del sistema tributario municipal
+                  peruano, permitiendo:</p>
+                <ul>
+                  <li>Automatización del cálculo de arbitrios, impuestos y tasas según normativa municipal vigente</li>
+                  <li>Integración con los principales bancos y entidades financieras del Perú</li>
+                  <li>Generación automática de deudas y emisión masiva de recibos</li>
+                  <li>Control en tiempo real del estado de cuenta de contribuyentes</li>
+                  <li>Reducción de la evasión tributaria mediante cruces de información automatizados</li>
+                </ul>
+                <a href="#contacto" class="btn btn-primary">Solicitar Información</a>
+              </div>
+              <div class="tab-image">
+                <img src="img/eficienia.jpg" alt="Eficiencia Recaudatoria">
+              </div>
+            </div>
+          </div>
+
+          <!-- Pestaña 2 -->
+          <div class="tab-pane" id="tab2">
+            <div class="tab-content-inner">
+              <div class="tab-text">
+                <h3>Protección de Datos con Estándares Nacionales</h3>
+                <p>Cumplimos con la Ley de Protección de Datos Personales (Ley N° 29733) y garantizamos:</p>
+                <ul>
+                  <li>Almacenamiento seguro de información sensible de contribuyentes</li>
+                  <li>Backups automáticos y recuperación ante desastres</li>
+                  <li>Control de acceso por perfiles y roles según normativa municipal</li>
+                  <li>Auditoría de trazabilidad de todas las operaciones realizadas</li>
+                  <li>Encriptación de datos sensibles según estándares del MEF</li>
+                </ul>
+                <a href="#contacto" class="btn btn-primary">Conocer más</a>
+              </div>
+              <div class="tab-image">
+                <img src="img/seguridad.jpg" alt="Seguridad de Datos">
+              </div>
+            </div>
+          </div>
+
+          <!-- Pestaña 3 -->
+          <div class="tab-pane" id="tab3">
+            <div class="tab-content-inner">
+              <div class="tab-text">
+                <h3>Gestión desde Cualquier Lugar del Perú</h3>
+                <p>Nuestra plataforma en la nube permite trabajar remotamente con:</p>
+                <ul>
+                  <li>Acceso seguro desde cualquier dispositivo con internet</li>
+                  <li>Funcionalidad offline para zonas con conectividad limitada</li>
+                  <li>App móvil para inspectores tributarios en campo</li>
+                  <li>Portal del contribuyente para autogestión las 24/7</li>
+                  <li>Sincronización automática cuando recupera conexión</li>
+                </ul>
+                <a href="#contacto" class="btn btn-primary">Solicitar Demo</a>
+              </div>
+              <div class="tab-image">
+                <img src="img/acceso.jpg" alt="Acceso Remoto">
+              </div>
+            </div>
+          </div>
+
+          <!-- Pestaña 4 -->
+          <div class="tab-pane" id="tab4">
+            <div class="tab-content-inner">
+              <div class="tab-text">
+                <h3>Optimización de Recursos Municipales</h3>
+                <p>Reducción significativa de costos operativos mediante:</p>
+                <ul>
+                  <li>Automatización de procesos manuales repetitivos</li>
+                  <li>Eliminación de papel y almacenamiento físico</li>
+                  <li>Reducción de personal dedicado a tareas administrativas</li>
+                  <li>Minimización de errores и rectificaciones costosas</li>
+                  <li>Optimización del tiempo de atención al contribuyente</li>
+                </ul>
+                <a href="#contacto" class="btn btn-primary">Calcular ahorros</a>
+              </div>
+              <div class="tab-image">
+                <img src="img/reduccion.jpg" alt="Reducción de Costos">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section id="testimonios" class="section gradient-bg">
+    <div class="container">
+      <h2 class="section-title" data-animate="fadeIn"> Testimonios</h2>
+      <p class="section-subtitle" data-animate="fadeIn" data-delay="0.1">Lo que dicen los funcionarios municipales que
+        ya usan nuestro sistema</p>
+
+      <div class="testimonials-grid">
+        <!-- Testimonio 1 -->
+        <div class="testimonial-card" data-animate="fadeIn" data-delay="0.1">
+          <div class="testimonial-header">
+            <img src="img/testimonio-1.jpg" alt="Juan Pérez">
+            <div>
+              <h4>Juan Pérez</h4>
+              <span>Alcalde - Municipalidad de Lima</span>
+            </div>
+          </div>
+          <p>"La implementación de Munisoft nos permitió aumentar nuestra recaudación en un 35% el primer año, recursos
+            que hemos invertido en mejorar los servicios a nuestros vecinos."</p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <!-- Testimonio 2 -->
+        <div class="testimonial-card" data-animate="fadeIn" data-delay="0.2">
+          <div class="testimonial-header">
+            <img src="img/testimonio-2.jpg" alt="María Gómez">
+            <div>
+              <h4>María Gómez</h4>
+              <span>Gerenta Municipal - Ayacucho</span>
+            </div>
+          </div>
+          <p>"El módulo de trámite documentario redujo nuestros tiempos de procesamiento de expedientes de 15 días a 48
+            horas, mejorando enormemente nuestra eficiencia."</p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+
+        <!-- Testimonio 3 -->
+        <div class="testimonial-card" data-animate="fadeIn" data-delay="0.3">
+          <div class="testimonial-header">
+            <img src="img/testimonio-3.jpg" alt="Carlos Rojas">
+            <div>
+              <h4>Carlos Rojas</h4>
+              <span>Jefe de Rentas - Cusco</span>
+            </div>
+          </div>
+          <p>"La plataforma de pagos en línea y la integración con bancos nos ha permitido reducir las colas en caja en
+            un 80%, mejorando la satisfacción de los contribuyentes."</p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CARRUSEL GRANDE DE FOTOS ========== -->
+  <div class="container">
+    <h1 class="title"><span>Confían en Nosotros</span></h1>
+    <p class="subtitle">Descubre todos los servicios que te ofrecemos
+    </p>
+
+    <div class="divider"></div>
+
+    <!-- Carrusel 3D Mejorado -->
+    <div class="carousel-container">
+      <div class="carousel" id="carousel">
+        <!-- Las imágenes se generarán dinámicamente con JavaScript -->
+      </div>
+
+      <button class="carousel-control prev" id="prev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="carousel-control next" id="next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <div class="carousel-indicators" id="indicators">
+      <!-- Los indicadores se generarán dinámicamente con JavaScript -->
+    </div>
+
+
+  </div>
+
+  <!-- Overlay para visualización de imagen completa -->
+  <div class="overlay" id="overlay">
+    <img src="" alt="" class="overlay-img" id="overlay-img">
+    <div class="close-btn" id="close-btn">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const carousel = document.getElementById('carousel');
+      const indicatorsContainer = document.getElementById('indicators');
+      const prevButton = document.getElementById('prev');
+      const nextButton = document.getElementById('next');
+      const overlay = document.getElementById('overlay');
+      const overlayImg = document.getElementById('overlay-img');
+      const closeBtn = document.getElementById('close-btn');
+
+      // Array con 10 imágenes de municipalidades (puedes reemplazar con tus propias imágenes)
+      const images = [
+        'img/azul.jpg',
+        'img/gestion.jpg',
+        'img/recaudacion.jpg',
+        'img/Morosos01.jpg',
+        'img/reportes.png',
+      ];
+
+      const totalItems = images.length;
+      let currentIndex = 0;
+      let autoSlideInterval;
+
+      // Crear elementos del carrusel
+      function createCarouselItems() {
+        carousel.innerHTML = '';
+        indicatorsContainer.innerHTML = '';
+
+        // Crear elementos de carrusel
+        for (let i = 0; i < totalItems; i++) {
+          const item = document.createElement('div');
+          item.className = 'carousel-item';
+
+          const img = document.createElement('img');
+          img.src = images[i];
+          img.alt = 'Municipalidad ' + (i + 1); // Corregida la sintaxis
+          img.className = 'carousel-img';
+
+          item.appendChild(img);
+          carousel.appendChild(item);
+
+          // Crear indicadores
+          const indicator = document.createElement('div');
+          indicator.className = 'indicator';
+          if (i === 0) indicator.classList.add('active');
+          indicator.addEventListener('click', () => {
+            stopAutoSlide();
+            goToSlide(i);
+            startAutoSlide();
+          });
+          indicatorsContainer.appendChild(indicator);
+        }
+
+        updateCarousel();
+      }
+
+      // Función para actualizar el carrusel
+      function updateCarousel() {
+        const items = document.querySelectorAll('.carousel-item');
+        const indicators = document.querySelectorAll('.indicator');
+
+        items.forEach((item, index) => {
+          // Calcular la posición relativa al índice actual
+          let position = index - currentIndex;
+
+          // Ajustar para el efecto de carrusel infinito
+          if (position < -totalItems / 2) position += totalItems;
+          if (position > totalItems / 2) position -= totalItems;
+
+          // Aplicar transformaciones según la posición
+          if (position === 0) {
+            // Elemento central
+            item.style.transform = 'translateX(-50%) scale(1)';
+            item.style.opacity = '1';
+            item.style.zIndex = '5';
+            item.style.filter = 'blur(0)';
+            item.classList.add('active');
+          } else if (position === -1 || position === 1) {
+            // Elementos adyacentes
+            const translateX = position * 300;
+            item.style.transform = 'translateX(calc(-50% + ' + translateX + 'px)) scale(0.9)'; // Corregida la sintaxis
+            item.style.opacity = '0.8';
+            item.style.zIndex = '4';
+            item.style.filter = 'blur(1px)';
+            item.classList.remove('active');
+          } else if (position === -2 || position === 2) {
+            // Elementos más lejanos
+            const translateX = position * 300;
+            item.style.transform = 'translateX(calc(-50% + ' + translateX + 'px)) scale(0.85)'; // Corregida la sintaxis
+            item.style.opacity = '0.6';
+            item.style.zIndex = '3';
+            item.style.filter = 'blur(2px)';
+            item.classList.remove('active');
+          } else {
+            // Elementos fuera de vista
+            item.style.transform = 'translateX(calc(-50% + 800px)) scale(0.8)';
+            item.style.opacity = '0';
+            item.style.zIndex = '2';
+            item.style.filter = 'blur(3px)';
+            item.classList.remove('active');
+          }
+        });
+
+        // Actualizar indicadores
+        indicators.forEach((indicator, index) => {
+          if (index === currentIndex) {
+            indicator.classList.add('active');
+          } else {
+            indicator.classList.remove('active');
+          }
+        });
+      }
+
+      // Función para ir a un slide específico
+      function goToSlide(index) {
+        currentIndex = index;
+        if (currentIndex < 0) currentIndex = totalItems - 1;
+        if (currentIndex >= totalItems) currentIndex = 0;
+        updateCarousel();
+      }
+
+      // Función para abrir imagen en overlay
+      function openOverlay(imgSrc) {
+        overlayImg.src = imgSrc;
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Función para cerrar overlay
+      function closeOverlay() {
+        overlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      // Función para avanzar al siguiente slide
+      function nextSlide() {
+        goToSlide(currentIndex + 1);
+      }
+
+      // Función para retroceder al slide anterior
+      function prevSlide() {
+        goToSlide(currentIndex - 1);
+      }
+
+      // Función para iniciar la transición automática
+      function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 3000); // Cambiar cada 3 segundos
+      }
+
+      // Función para detener la transición automática
+      function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+      }
+
+      // Event listeners para botones de navegación
+      nextButton.addEventListener('click', function () {
+        stopAutoSlide();
+        nextSlide();
+        startAutoSlide();
+      });
+
+      prevButton.addEventListener('click', function () {
+        stopAutoSlide();
+        prevSlide();
+        startAutoSlide();
+      });
+
+      // Event listeners para las imágenes
+      carousel.addEventListener('click', function (e) {
+        const item = e.target.closest('.carousel-item');
+        if (item) {
+          const imgSrc = item.querySelector('img').src;
+          openOverlay(imgSrc);
+        }
+      });
+
+      // Event listener para cerrar overlay
+      closeBtn.addEventListener('click', closeOverlay);
+
+      // Cerrar overlay al hacer clic fuera de la imagen
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) {
+          closeOverlay();
+        }
+      });
+
+      // Pausar auto slide al pasar el ratón por encima
+      carousel.addEventListener('mouseenter', stopAutoSlide);
+
+      // Reanudar auto slide al quitar el ratón
+      carousel.addEventListener('mouseleave', startAutoSlide);
+
+      // Inicializar el carrusel y comenzar la transición automática
+      createCarouselItems();
+      startAutoSlide();
+
+      // Navegación con teclado
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight') {
+          stopAutoSlide();
+          nextSlide();
+          startAutoSlide();
+        } else if (e.key === 'ArrowLeft') {
+          stopAutoSlide();
+          prevSlide();
+          startAutoSlide();
+        } else if (e.key === 'Escape') {
+          closeOverlay();
+        }
+      });
+    });
+  </script>
+
+  <!-- ========== SECCIÓN DE CONTACTO ========== -->
+  <section class="section contact" id="contactar">
+    <div class="section-title2">
+      <h2>Contacto</h2>
+      <p>¿Tienes alguna pregunta? No dudes en contactarnos.</p>
+    </div>
+
+    <div class="contact-container">
+      <!-- Información de contacto -->
+      <div class="contact-info">
+        <h3>Información de Contacto</h3>
+        <p>Estamos aquí para ayudarte. Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+
+        <div class="contact-details">
+          <!-- Email -->
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-text">
+              <h4>Email</h4>
+              <a href="https://contacts.google.com/person/111061915920760378555?hl=en">rs.siamsoft@gmail.com</a>
+            </div>
+          </div>
+
+          <!-- Teléfono -->
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <div class="contact-text">
+              <h4>Teléfono</h4>
+              <a href="https://wa.me/51996909051?text=hola,%20deseo%20más%20información"> +51 996 909 051</a>
+            </div>
+          </div>
+
+          <!-- Ubicación -->
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-text">
+              <h4>Ubicación</h4>
+              <p> Pasaje Washintong Nº107 Urb. Amauta</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enlaces a redes sociales -->
+        <div class="social-links">
+          <a href="https://www.facebook.com/SIAMSoftSftwareparamunicipalidades/" title="Facebook" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" />
+            </svg>
+          </a>
+          <a href="https://x.com/siamsoft" title="Twitter" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M23 3C22.0424 3.67548 20.9821 4.19211 19.86 4.53C19.2577 3.83751 18.4573 3.34669 17.567 3.12393C16.6767 2.90116 15.7395 2.9572 14.8821 3.28445C14.0247 3.61171 13.2884 4.1944 12.773 4.95372C12.2575 5.71303 11.9877 6.61234 12 7.53V8.53C10.2426 8.57557 8.50127 8.18581 6.93101 7.39545C5.36074 6.60508 4.01032 5.43864 3 4C3 4 -1 13 8 17C5.94053 18.398 3.48716 19.0989 1 19C10 24 21 19 21 7.5C20.9991 7.22145 20.9723 6.94359 20.92 6.67C21.9406 5.66349 22.6608 4.39271 23 3V3Z" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/roberto-centeno-chicani-027a6612a/?originalSubdomain=pe" title="LinkedIn"
+            class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" />
+              <path d="M6 9H2V21H6V9Z" />
+              <path
+                d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Formulario de contacto -->
+      <div class="form-container">
+        <form id="contactForm">
+          <!-- Campo Nombre -->
+          <div class="form-group">
+            <label for="nombre" class="required">Nombre Completo</label>
+            <input type="text" id="nombre" required>
+          </div>
+
+          <!-- Campo Correo -->
+          <div class="form-group">
+            <label for="correo" class="required">Correo Electrónico</label>
+            <input type="email" id="correo" required>
+          </div>
+
+          <!-- Campo Municipalidad -->
+          <div class="form-group">
+            <label for="municipalidad">Municipalidad</label>
+            <input type="text" id="municipalidad">
+          </div>
+
+          <!-- Campo Asunto -->
+          <div class="form-group">
+            <label for="asunto" class="required">Asunto</label>
+            <select id="asunto" required>
+              <option value="" disabled selected>Seleccione un tema</option>
+              <option value="Consulta general">Consulta general</option>
+              <option value="catastro urbano">Catastro urbano</option>
+              <option value="beneficios para la municipalidad">Beneficios para la municipalidad</option>
+              <option value="modulo de rentas municipales">Módulo de rentas municipales</option>
+              <option value="modulo de Caja">Módulo de Caja</option>
+              <option value="modulos de atención ciudadana">Módulos de atención ciudadana</option>
+              <option value="Soporte técnico">Soporte técnico</option>
+              <option value="Facturación">Facturación</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+
+          <!-- Campo Mensaje -->
+          <div class="form-group">
+            <label for="mensaje" class="required">Mensaje</label>
+            <textarea id="mensaje" required></textarea>
+          </div>
+
+          <!-- Botón de envío -->
+          <div class="form-group">
+            <button type="submit" class="btn-submit">Enviar Mensaje</button>
+          </div>
+        </form>
+
+        <!-- Mensaje de confirmación (oculto inicialmente) -->
+        <div id="confirmationMessage" class="confirmation-message">
+          ¡Gracias por tu mensaje! Se abrirá tu cliente de correo para completar el envío.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    /**
+     * Configura el formulario de contacto con validación y envío a Gmail
+     */
+    function setupContactForm() {
+      const contactForm = document.getElementById('contactForm');
+      const confirmationMessage = document.getElementById('confirmationMessage');
+
+      // Salir si no existe el formulario
+      if (!contactForm) return;
+
+      contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Validación básica
+        const nombre = document.getElementById('nombre').value;
+        const correo = document.getElementById('correo').value;
+        const asunto = document.getElementById('asunto').value;
+        const mensaje = document.getElementById('mensaje').value;
+
+        if (!nombre || !correo || !asunto || !mensaje) {
+          alert('Por favor, complete todos los campos obligatorios.');
+          return;
+        }
+
+        // Obtener valores del formulario
+        const municipalidad = document.getElementById('municipalidad').value;
+        const asuntoSelect = document.getElementById('asunto');
+        const asuntoTexto = asuntoSelect.options[asuntoSelect.selectedIndex].text;
+
+        // Crear el cuerpo del mensaje
+        const cuerpo =
+          "Nombre: " + nombre + "\n" +
+          "Correo: " + correo + "\n" +
+          "Municipalidad: " + municipalidad + "\n" +
+          "Asunto: " + asuntoTexto + "\n\n" +
+          "Mensaje:\n" + mensaje;
+
+        // Codificar para URL
+        const asuntoCodificado = encodeURIComponent(asuntoTexto);
+        const cuerpoCodificado = encodeURIComponent(cuerpo);
+
+        // Crear el enlace de Gmail
+        const gmailLink = "https://mail.google.com/mail/?view=cm&fs=1&to=rs.siamsoft@gmail.com&su=" + asuntoCodificado + "&body=" + cuerpoCodificado;
+
+        // Mostrar mensaje de confirmación
+        if (confirmationMessage) {
+          confirmationMessage.style.display = 'block';
+        }
+
+        // Abrir Gmail después de un breve retraso para que el usuario vea el mensaje
+        setTimeout(function () {
+          window.open(gmailLink, '_blank');
+
+          // Limpiar el formulario después de enviar
+          contactForm.reset();
+
+          // Ocultar el mensaje de confirmación después de 5 segundos
+          if (confirmationMessage) {
+            setTimeout(function () {
+              confirmationMessage.style.display = 'none';
+            }, 5000);
+          }
+        }, 1000);
+      });
+    }
+
+    /**
+     * Función principal que inicializa todos los componentes cuando el DOM está listo
+     */
+    function initializeApp() {
+      // Configurar formulario de contacto
+      setupContactForm();
+    }
+
+    // Inicializar la aplicación cuando el DOM esté listo
+    document.addEventListener('DOMContentLoaded', initializeApp);
+  </script>
+
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna 1 -->
+        <div class="footer-col">
+          <div class="footer-logo">
+            <img src="img/logo_munisoft_white.png" alt="SIAMsoft">
+          </div>
+          <p class="footer-about">Sistema Integrado de Administración Municipal - Líderes en soluciones tecnológicas
+            para gobiernos locales desde 2000.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="footer-col">
+          <h3 class="footer-title">Soluciones</h3>
+          <ul class="footer-links">
+            <li><a href="#caracteristicas">Gestión Tributaria</a></li>
+            <li><a href="#caracteristicas">Trámite Documentario</a></li>
+            <li><a href="#caracteristicas">Catastro Urbano</a></li>
+            <li><a href="#caracteristicas">Atención al Ciudadano</a></li>
+            <li><a href="#caracteristicas">Recursos Humanos</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="footer-col">
+          <h3 class="footer-title">Recursos</h3>
+          <ul class="footer-links">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Documentación</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="#">Videos Tutoriales</a></li>
+            <li><a href="#">Descargas</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4 -->
+        <div class="footer-col">
+          <h3 class="footer-title">Contacto</h3>
+          <ul class="footer-contact-info">
+            <li><i class="fas fa-map-marker-alt"></i>Psj.Washinton </li>
+            <li><i class="fas fa-phone"></i> +51 996 909 051</li>
+            <li><i class="fas fa-envelope"></i> siamperu@hotmail.com</li>
+            <li><i class="fas fa-clock"></i> Lun-Vie: 8:30am - 6:00pm</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          &copy; 2025 SIAMsoft. Todos los derechos reservados.
+        </div>
+        <div class="footer-legal">
+          <a href="#">Política de Privacidad</a>
+          <a href="#">Términos de Servicio</a>
+          <a
+            href="https://www.google.com/maps/place/SIAM+SRL/@-15.512907,-70.1301396,18z/data=!3m1!4b1!4m6!3m5!1s0x9167f409758a7215:0xcba7171bf485ff93!8m2!3d-15.512907!4d-70.1288888!16s%2Fg%2F11g885zrpg?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D">Mapa
+            del Sitio</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/chat.js"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/animaciones.js"></script>
+
+</body>
+
+</html>
